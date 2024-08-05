@@ -70,12 +70,12 @@ class LoaderWindow(QMainWindow):
 
     def check_for_updates(self, current_version):
         try:
-            url = 'http://hostinob.beget.tech/client/check_update.php'
+            url = 'ссылка'
             response = requests.get(url, params={'version': current_version})
             update_info = response.json()
             if update_info['update']:
                 target_folder = "C:\\Centric\\"
-                url = "http://hostinob.beget.tech/client/client.jar"
+                url = "ссылка"
                 directory_to_clean = r"C:\Centric"
                 filename = "client.jar"
                 self.delete_files_except(directory_to_clean, filename)
@@ -86,8 +86,8 @@ class LoaderWindow(QMainWindow):
 
     def download_files(self):
         target_folder = "C:\\Centric\\"
-        java_url = "http://hostinob.beget.tech/client/java.zip"
-        lib_url = "http://hostinob.beget.tech/client/libraries.zip"
+        java_url = "ссылка"
+        lib_url = "ссылка"
 
         self.download_and_unzip(java_url, target_folder)
         self.download_and_unzip(lib_url, target_folder)
@@ -120,7 +120,7 @@ class LoaderWindow(QMainWindow):
     def initUI(self):
         main_layout = QGridLayout()
 
-        self.title_label = QLabel("Centric Client")
+        self.title_label = QLabel("Мой отец крашдами")
         self.title_label.setFont(QFont("Arial", 30, QFont.Bold))
         self.title_label.setStyleSheet("color: #FFFFFF;")
         self.title_label.setAlignment(Qt.AlignCenter)
